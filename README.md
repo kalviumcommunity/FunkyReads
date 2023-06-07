@@ -3,7 +3,8 @@
 
 ## Unplug and Connect: A Digital Haven for Book Lovers to Discover, Engage, and Share
 
-## Objective :- The objective of Bookworm Haven's Readme is to present a captivating and concise description of the platform, highlighting its unique features and benefits. The Readme aims to attract book lovers by emphasizing the virtual nature of the platform, the extensive collection of books available, the opportunity to connect with like-minded individuals, engage in stimulating discussions, discover new literary gems, and provide valuable feedback. Ultimately, the objective is to convey the allure and value of Bookworm Haven as a digital haven where the joy of reading and the camaraderie of book clubs seamlessly blend together.
+## Objective :-
+The objective of Bookworm Haven's Readme is to present a captivating and concise description of the platform, highlighting its unique features and benefits. The Readme aims to attract book lovers by emphasizing the virtual nature of the platform, the extensive collection of books available, the opportunity to connect with like-minded individuals, engage in stimulating discussions, discover new literary gems, and provide valuable feedback. Ultimately, the objective is to convey the allure and value of Bookworm Haven as a digital haven where the joy of reading and the camaraderie of book clubs seamlessly blend together.
 
 ## Description :-
 
