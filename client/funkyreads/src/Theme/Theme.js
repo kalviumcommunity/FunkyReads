@@ -1,5 +1,5 @@
 import { extendTheme } from '@chakra-ui/react'
-import  {} from "./textStyles";
+import {textStyles} from "./textStyles"
 
 
-export const Theme = extendTheme({})
+export const Theme = extendTheme({textStyles})
