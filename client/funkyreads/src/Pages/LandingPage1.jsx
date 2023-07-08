@@ -2,15 +2,31 @@ import { Box,Button,Flex, Text,Image } from '@chakra-ui/react'
 import { ArrowDownIcon } from '@chakra-ui/icons'
 import { BsFacebook,BsTwitter,BsInstagram} from "react-icons/bs";
 import { IconContext } from 'react-icons';
-import React from 'react'
+import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+import React,{ useEffect, useState } from 'react'
 
-const LandingPage1 = () => {
+
+
+const LandingPage1 = ({ setShowComponent2 }) => {
+  
+  const handleClick = () => {
+    setShowComponent2(true);
+  };
+
+
   const containerStyle = {
     background: 'linear-gradient(to bottom, #000000 ,#525007, #F8EF15 95%)',
     WebkitTextFillColor: 'transparent',
     WebkitBackgroundClip: 'text'
   };
   return (
+    <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -100 }}
+      transition={{ duration: 0.5 }}
+    >
     <Box width={"100vw"} height={"100vh"} bgColor={"#FCF9EA"} pt={"3vh"}>
 
       {/* Top Navigation Button Section */}
@@ -45,12 +61,14 @@ const LandingPage1 = () => {
       </Box>
 
       {/* Slider Box */}
-      <Box pos={"fixed"} width={"100vw"} bottom="0" h={"10vh"} bgColor={"#FFCB01"} borderRadius={"100% 100% 0px 0px"}>
-        <Text textStyle={"ClickForMore"}>Click For More</Text>
+      <Box pos={"fixed"} width={"100vw"} bottom="0" h={"10vh"} bgColor={"#FFCB01"} borderRadius={"100% 100% 0px 0px"} >
+
+        <Button textStyle={"ClickForMore"} onClick={handleClick} >Click For More</Button>
       </Box>
 
     </Box>
+    </motion.div>
   )
 }
 
-export default LandingPage1
+export default LandingPage1;

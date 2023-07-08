@@ -8,13 +8,13 @@ import Signup from '../Pages/AUTHENTICATION/Signup'
 import ProductListingPage from '../Pages/ProductListingPage'
 import ToBeRead from '../Pages/ToBeRead'
 import SingleProductPage from '../Pages/SingleProductPage'
+import Animations from '../Pages/Animations'
 
 const AllRoutes = () => {
   return (
     <div>
         <Routes>
-            <Route path='/' element={<LandingPage1/>}></Route>
-            <Route path='/landingtwo' element={<LandingPage2/>}></Route>
+            <Route path='/' element={<Animations/>}></Route>
             <Route path='/register' element={<Signup/>}></Route>
             <Route path='/signin' element={<Signin/>}></Route>
             <Route path='/category' element={<CategoryPage/>}></Route>
