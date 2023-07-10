@@ -24,7 +24,12 @@ export const textStyles = {
     ClickForMore:{
         fontSize:"24px",
         fontWeight:"700",
-        marginTop:"20px"
+        marginTop:"20px",
+        backgroundColor:"#FFCB01",
+    },
+    authPageHead:{
+        fontSize:"60px",
+        fontWeight:"500"
     }
 
 

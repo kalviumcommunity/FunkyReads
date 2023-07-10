@@ -63,7 +63,7 @@ const LandingPage1 = ({ setShowComponent2 }) => {
       {/* Slider Box */}
       <Box pos={"fixed"} width={"100vw"} bottom="0" h={"10vh"} bgColor={"#FFCB01"} borderRadius={"100% 100% 0px 0px"} >
 
-        <Button textStyle={"ClickForMore"} onClick={handleClick} >Click For More</Button>
+        <Button textStyle={"ClickForMore"}  onClick={handleClick} _hover={{bgColor:"#ffcb01"}} >Click For More</Button>
       </Box>
 
     </Box>
