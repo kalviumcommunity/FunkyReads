@@ -29,7 +29,7 @@ const LandingPage2 = ({ setShowComponent2 }) => {
       </Box>
 
       <Box h={"10vh"} mt={"5vh"} >
-        <Button h={"100%"} w={"400px"} fontSize={"22px"} borderRadius={"40px"} textStyle={"LandingTopButton"} onClick={handleClick}>Start Your Journey</Button>
+        <Button h={"100%"} w={"400px"} fontSize={"22px"} borderRadius={"40px"} textStyle={"LandingTopButton"} _hover={{bgColor:"black",color:"#ffcb01"}}>Start Your Journey</Button>
       </Box>
 
       

@@ -1,7 +1,5 @@
 import React from 'react'
 import {Routes,Route} from "react-router-dom"
-import LandingPage1 from '../Pages/LandingPage1'
-import LandingPage2 from '../Pages/LandingPage2'
 import CategoryPage from '../Pages/CategoryPage'
 import Signin from '../Pages/AUTHENTICATION/Signin'
 import Signup from '../Pages/AUTHENTICATION/Signup'
