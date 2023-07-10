@@ -32,6 +32,7 @@ const Signin = () => {
 
         <Box w={"100%"} h={"400px"} mt={"10%"} >
           
+          
           <form>
           <FormControl>
           <Input type='text' mt={"30px"} w={"95%"}  bgColor={"#FCF9EA"}  boxShadow={" rgba(0, 0, 0, 0.24) 0px 3px 8px;"} placeholder='Email Address'></Input>
