@@ -4,10 +4,10 @@ import {Box,Flex, ListItem, UnorderedList,Image,Text} from "@chakra-ui/react"
 const Footer = () => {
   return (
     <Box w={"100%"} h={"auto"} bgColor={"#fcfcfc"} >
-      <Box m="30px 0px 30px">
+      <Box m="0px 0px 30px" >
         <Flex justifyContent={"space-around"} dir='row'>
 
-        <Box width={"10%"} h={"auto"} textAlign={"initial"}>
+        <Box width={"10%"} h={"auto"} mt={"30px"} textAlign={"initial"}>
           <UnorderedList listStyleType={"none"}>
             <ListItem textStyle={"FooterHead"}> Company </ListItem>
             <ListItem textStyle={"FooterList"}>About Us</ListItem>
@@ -16,7 +16,7 @@ const Footer = () => {
             <ListItem textStyle={"FooterList"}>Contact Us</ListItem>
           </UnorderedList>
         </Box>
-        <Box width={"10%"} h={"auto"} textAlign={"initial"}>
+        <Box width={"10%"} h={"auto"}  mt={"30px"} textAlign={"initial"}>
           <UnorderedList listStyleType={"none"}>
             <ListItem textStyle={"FooterHead"}> Policies</ListItem>
             <ListItem textStyle={"FooterList"}>Privacy Policies</ListItem>
@@ -25,7 +25,7 @@ const Footer = () => {
             <ListItem textStyle={"FooterList"}>Copyright Policy</ListItem>
           </UnorderedList>
         </Box>
-        <Box width={"10%"} h={"auto"} textAlign={"initial"}>
+        <Box width={"10%"} h={"auto"}  mt={"30px"} textAlign={"initial"}>
           <UnorderedList listStyleType={"none"}>
             <ListItem textStyle={"FooterHead"}>Help</ListItem>
             <ListItem textStyle={"FooterList"}>Payment</ListItem>
@@ -34,7 +34,7 @@ const Footer = () => {
             <ListItem textStyle={"FooterList"}>FAQ</ListItem>
           </UnorderedList>
         </Box>
-        <Box width={"10%"} h={"auto"} textAlign={"initial"}>
+        <Box width={"10%"} h={"auto"}  mt={"30px"} textAlign={"initial"}>
           <UnorderedList listStyleType={"none"}>
             <ListItem textStyle={"FooterHead"}>Misc</ListItem>
             <ListItem textStyle={"FooterList"}>Affiliate</ListItem>

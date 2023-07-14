@@ -192,8 +192,8 @@ const CategoryPage = () => {
 
         <Flex overflow="hidden">
               {booklist.map((el, index) => (
-              <Link to={`/products/${index}`}>
-                <Box key={index} mt={"30px"}>
+              <Link key={index} to={`/products/${index}`}>
+                <Box  mt={"30px"}>
                   <Image src={el.src} alt={`Image ${index}`} m={"0px 90px 0px"} w={"35%"} />
                   <Text fontSize={"20px"} fontWeight={"700"}>{el.title}</Text>
                   <Text>{el.Author}</Text>
@@ -215,11 +215,13 @@ const CategoryPage = () => {
 
         <Flex overflow="hidden">
               {booklist.map((el, index) => (
-                <Box key={index} mt={"30px"}>
+                <Link key={index} to={`/products/${index}`}>
+                <Box  mt={"30px"}>
                   <Image src={el.src} alt={`Image ${index}`} m={"0px 90px 0px"} w={"35%"} />
                   <Text fontSize={"20px"} fontWeight={"700"}>{el.title}</Text>
                   <Text>{el.Author}</Text>
                 </Box>
+                </Link>
               ))}
         </Flex>
 
