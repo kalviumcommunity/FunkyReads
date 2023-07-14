@@ -49,6 +49,10 @@ export const textStyles = {
         fontSize:"20px",
         fontWeight:"600",
         letterSpacing:"1px"
+    },
+    TBR:{
+        fontSize:"24px",
+        fontWeight:"700",
     }
 
 

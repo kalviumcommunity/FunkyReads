@@ -3,13 +3,14 @@ import React from 'react'
 import { useParams } from "react-router-dom";
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
-import { AiOutlineStar } from "react-icons/ai";
-import { BsStarFill } from "react-icons/bs";
-import { IconContext } from 'react-icons';
+import {useNavigate} from "react-router-dom"
 
 const SingleProductPage = () => {
   const {id} = useParams();
+  const navigate = useNavigate()
   const [currentImage,setCurrentImage] = React.useState("");
+  const [isAddingData, setIsAddingData] = React.useState(false);
+  const [buttonText, setButtonText] = React.useState("To Be Read");
   const[data,setData] = React.useState({})
   console.log(id)
   const booklist=[
@@ -42,11 +43,43 @@ const SingleProductPage = () => {
   ]
 
   let tobeRead = JSON.parse(localStorage.getItem("ToBeRead"))|| [];
-  const handleClick = ()=>{
-      tobeRead.push(data)
-      localStorage.setItem("ToBeRead",JSON.stringify(tobeRead));
-      
+  
+  const RemoveData=(data)=>{
+    const updatedData = tobeRead.filter((obj) => obj.title !== data.title);
+    localStorage.setItem("ToBeRead", JSON.stringify(updatedData));
   }
+  
+  const handleClick = () => {
+    if (!isAddingData) {
+      setButtonText("Adding Data..");
+      setIsAddingData(true);
+      
+      setTimeout(() => {
+        setButtonText("Remove From TBR");
+        tobeRead.push(data)
+       localStorage.setItem("ToBeRead",JSON.stringify(tobeRead));
+       localStorage.setItem("isAddingData", JSON.stringify(true));
+      }, 2000);
+
+      setTimeout(()=>{
+        navigate("/tbr")
+      },4000)
+    } 
+    else {
+      setIsAddingData(false);
+      RemoveData(data)
+      setButtonText("To Be Read");
+    }
+  };
+
+  React.useEffect(() => {
+    const storedState = localStorage.getItem("isAddingData");
+    if (storedState) {
+      setIsAddingData(JSON.parse(storedState));
+      setButtonText(JSON.parse(storedState) ? "Remove From TBR" : "ToBeRead");
+    }
+  }, []);
+  
 
   React.useEffect(()=>{
     const filteredData = booklist.filter((el,i)=>{
@@ -60,6 +93,10 @@ const SingleProductPage = () => {
     setData(filteredData[0]);
     
   },[])
+
+  const buttonStyle = {
+    backgroundColor: buttonText === "Remove From TBR" ? "red" : "#FFCB01",
+  };
   return (
     <Box>
       <Navbar />
@@ -88,7 +125,9 @@ const SingleProductPage = () => {
                 <Text mt={"30px"} textStyle={"singlepageText"}>Description-</Text>
                 <Text fontSize={"18px"}>Before It Ends with Us, it started with Atlas. Colleen Hoover tells fan favourite Atlas’ side of the story and shares what comes next in this long-anticipated sequel to the #1 Sunday Times bestseller It Ends with Us.</Text>
 
-                <Button bgColor={"#FFCB01"} onClick={handleClick} mt={"70px"} p={"20px 50px 20px"} _hover={{bgColor:"black",color:"#FFCB01"}}>To Be Read</Button>
+                <Button  onClick={handleClick} style={buttonStyle} mt={"70px"} p={"20px 50px 20px"} >
+                {buttonText}
+                </Button>
 
             </Box>
           </Flex>
