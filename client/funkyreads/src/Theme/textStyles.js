@@ -30,7 +30,18 @@ export const textStyles = {
     authPageHead:{
         fontSize:"60px",
         fontWeight:"500"
+    },
+    categoryHead:{
+        fontSize:"36px",
+        fontWeight:"700",
+        letterSpacing:"2px"
+    },
+    categorySubHead:{
+        fontSize:"20px",
+        color:"#9F1111",
+        marginTop:"-10px"
     }
+
 
 
 }
