@@ -3,7 +3,7 @@ import {Box,Flex, ListItem, UnorderedList,Image,Text} from "@chakra-ui/react"
 
 const Footer = () => {
   return (
-    <Box w={"100%"} h={"auto"} bgColor={"#fcfcfc"} border={"1px solid grey"} pos={"fixed"} bottom={"0"}>
+    <Box w={"100%"} h={"auto"} bgColor={"#fcfcfc"} >
       <Box m="30px 0px 30px">
         <Flex justifyContent={"space-around"} dir='row'>
 

@@ -5,7 +5,7 @@ import {SearchIcon } from '@chakra-ui/icons'
 
 const Navbar = () => {
   return (
-    <Box w={"100%"} h={"80px"} bgColor={"#FFCB01"} p={"5px 20px 5px"} pos={"sticky"} top={"0"}>
+    <Box w={"100%"} h={"80px"} bgColor={"#FFCB01"} p={"5px 20px 5px"} pos={"sticky"} zIndex={1} top={"0"}>
       <Flex justifyContent={"space-between"} dir='row'>
         {/* Logo */}
        <Image src={logo} w={"70px"} borderRadius={"50px"} />
