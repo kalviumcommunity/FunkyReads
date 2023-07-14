@@ -40,6 +40,15 @@ export const textStyles = {
         fontSize:"20px",
         color:"#9F1111",
         marginTop:"-10px"
+    },
+    singlePagehead:{
+        fontSize:"30px",
+        fontWeight:"700",
+    },
+    singlepageText:{
+        fontSize:"20px",
+        fontWeight:"600",
+        letterSpacing:"1px"
     }
 
 
